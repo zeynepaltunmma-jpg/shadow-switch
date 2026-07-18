@@ -79,22 +79,6 @@
 
     <script src="script.js"></script>
 
-<script>
-    if ("serviceWorker" in navigator) {
-        window.addEventListener("load", () => {
-            navigator.serviceWorker
-                .register("./service-worker.js")
-                .then(() => {
-                    console.log("Service Worker aktif.");
-                })
-                .catch((error) => {
-                    console.log(
-                        "Service Worker hatası:",
-                        error
-                    );
-                });
-        });
-    }
-</script>
+
 </body>
 </html>
