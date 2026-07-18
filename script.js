@@ -65,7 +65,7 @@ const context = canvas.getContext("2d");
 
 const stars = [];
 
-for (let i = 0; i < 45; i++) {
+for (let i = 0; i < 25; i++) {
     stars.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
@@ -98,7 +98,7 @@ const player = {
     x: 80,
     y: canvas.height / 2,
     radius: 18,
-    speedY: 2
+    speedY: 5
 };
 
 const obstacle = {
@@ -138,14 +138,14 @@ function drawPlayer() {
 }
 
 function createParticles() {
-    for (let i = 0; i < 18; i++) {
+    for (let i = 0; i < 8; i++) {
         particles.push({
             x: player.x,
             y: player.y,
             radius: Math.random() * 3 + 1,
             speedX: (Math.random() - 0.5) * 6,
             speedY: (Math.random() - 0.5) * 6,
-            life: 35
+            life: 22
         });
     }
 }
@@ -365,7 +365,7 @@ function startGame() {
     gameRunning = true;
 
     player.y = canvas.height / 2;
-    player.speedY = 2;
+    player.speedY = 5;
 
     obstacle.x = canvas.width;
     obstacle.gapY = 235;
@@ -450,7 +450,7 @@ function drawParticles() {
 }
 
 
-canvas.addEventListener("click", switchWorld);
+canvas.addEventListener("pointerdown", switchWorld);
 startButton.addEventListener("click", startGame);
 restartButton.addEventListener("click", startGame);
 
