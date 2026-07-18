@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #111111;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.game-wrapper {
+    width: 100%;
+    max-width: 440px;
+
+    padding: 20px;
+
+    text-align: center;
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 15px;
+
+    color: white;
+}
+
+.game-header h1 {
+    font-size: 24px;
+}
+
+.score-box {
+    font-size: 18px;
+}
+
+#gameCanvas {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    border: 2px solid white;
+    border-radius: 16px;
+
+    background: #f4f4f4;
+
+    touch-action: manipulation;
+}
+
+#startButton {
+    width: 100%;
+
+    margin-top: 15px;
+    padding: 14px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: white;
+    color: black;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+#startButton:hover {
+    opacity: 0.85;
+}
+
+.instructions {
+    margin-top: 12px;
+
+    color: #bbbbbb;
+    font-size: 14px;
+}
+
+#gameOverScreen.hidden {
+    display: none;
+}
+
+#gameOverScreen{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.75);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:20px;
+
+    color:white;
+
+    font-size:26px;
+
+    z-index:999;
+
+}
+
+#gameOverScreen button{
+
+    padding:15px 35px;
+
+    border:none;
+
+    border-radius:12px;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+}
+
+#soundButton {
+    width: 44px;
+    height: 44px;
+
+    border: 1px solid white;
+    border-radius: 50%;
+
+    background: transparent;
+    color: white;
+
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#soundButton:hover {
+    background: white;
+    color: black;
+}
