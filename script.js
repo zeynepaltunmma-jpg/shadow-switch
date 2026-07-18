@@ -11,15 +11,17 @@ hitSound.volume = 0.5;
 
 
 function playSound(sound) {
-    if (!soundEnabled) {
+    if (!soundEnabled || !sound) {
         return;
     }
 
-    sound.currentTime = 0;
-
-    sound.play().catch((error) => {
-        console.log("Ses oynatılamadı:", error);
-    });
+    try {
+        sound.pause();
+        sound.currentTime = 0;
+        sound.play().catch(() => {});
+    } catch (error) {
+        console.log("Ses hatası:", error);
+    }
 }
 
 function switchWorld() {

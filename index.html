@@ -10,6 +10,15 @@
 
     <title>Shadow Switch</title>
 
+    <meta name="theme-color" content="#111111">
+
+<link rel="manifest" href="manifest.json">
+
+<link
+    rel="apple-touch-icon"
+    href="icons/icon-192.png"
+>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -69,5 +78,23 @@
     </main>
 
     <script src="script.js"></script>
+
+<script>
+    if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+            navigator.serviceWorker
+                .register("./service-worker.js")
+                .then(() => {
+                    console.log("Service Worker aktif.");
+                })
+                .catch((error) => {
+                    console.log(
+                        "Service Worker hatası:",
+                        error
+                    );
+                });
+        });
+    }
+</script>
 </body>
 </html>

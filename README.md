@@ -51,7 +51,7 @@ Survive as long as possible and beat your High Score.
 
 ## 📷 Screenshot
 
-> Add a screenshot here.
+
 
 Example:
 
